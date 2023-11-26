@@ -14,7 +14,7 @@ namespace Oris_First_Semestrovka.Configuration
 
         [JsonProperty("Port")]
         public uint Port { get; set; }
-        public static string StaticFilePath = @"C:\Users\korik\source\repos\MechanicalDeathtrap\ReposCsNew\Oris_First_Semestrovka\Oris_First_Semestrovka\bin\Debug\net6.0\";//"static";//{ get; set; }
+        public static string StaticFilePath = @"C:\Users\korik\source\repos\MechanicalDeathtrap\ReposCsNew\First_semestrovka_test\First_semestrovka_test\bin\Debug\net6.0\";//"static";//{ get; set; }
 
     }
 }
