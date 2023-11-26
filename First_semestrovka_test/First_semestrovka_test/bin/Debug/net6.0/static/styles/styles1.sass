@@ -1,0 +1,546 @@
+//#58003B
+@import "fonts.sass"
+@import "adaptive.sass"
+@import "page-header"
+@import "main-content"
+@import "footer"
+$violet: #520044
+$white: #f5f3f5
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+  //list-style: none
+  font-family: 'MyRubik', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'
+  text-decoration: none
+
+body
+  background-color: #bacdd8
+
+div, span, p, ol, li, section, h1, h2, h3, h4, h5, h6, header, img, nav, form, ul, a, article, aside, body, html
+  vertical-align: baseline
+  border: 0
+  margin: 0
+  padding: 0
+
+section
+  display: block
+
+.global-navigation .wds-dropdown__toggle
+  @media only screen and (max-height: 840px)
+    width: 50px
+
+.global-navigation .wds-dropdown__toggle
+  width: 53px
+
+.wds-dropdown__toggle
+  position: relative
+  cursor: pointer
+
+.global-navigation .wds-dropdown.is-anon-dropdown .wds-dropdown__content
+  padding: 0 12px
+
+.global-navigation .wds-dropdown .wds-dropdown__content
+  box-shadow: 6px 3px 12px -9px hsla(0,0%,100%,.3)
+
+.global-navigation
+  background-color: $white
+  border-top: 0 solid $violet
+  bottom: 0
+  box-shadow: 0 3px 12px 0 rgba(0,0,0,.3)
+  color: $violet
+  display: flex
+  flex-direction: column
+  font-size: 10px
+  font-weight: bolder
+  justify-content: space-between
+  left: 0
+  position: fixed
+  top: 0
+  width: 66px
+  z-index: 800
+
+  &__navigation
+    grid-row-gap: 9px
+    display: grid
+
+  &__bottom
+    bottom: 0
+    position: fixed
+    background-color: $white
+    padding: 16px 0 16px 0
+    display: grid
+    width: 66px
+    box-shadow: rgba(30,12,27,0.3)
+    justify-items: center
+
+  &__top
+    background-color: $white
+    display: grid
+    justify-items: center
+
+  &__nav
+    grid-row-gap: 12px
+    max-width: 100%
+    display: grid
+    justify-items: center
+
+    @include tablet
+      grid-row-gap: 3px
+
+  &__logo
+    font-size: 10px
+    font-weight: 900
+    line-height: 1
+    display: block
+    text-align: center
+
+  &__logo-text
+    text-align: center
+
+  &__logo:active, &__logo:focus, &__logo:hover, &__logo:visited
+    color: $violet
+
+  &__search
+    justify-content: center
+    display: grid
+
+  &__search:active, &__search:focus, &__search:hover, &__search:visited
+    border-color: $violet
+    border-radius: 50%
+    transition-duration: .3s
+    background-color: rgb(199 199 199 / 0.5)
+    transition-property: background-color,border-color
+
+  &__search-icon
+    height: auto
+    width: 24px
+
+  &__links
+    grid-row-gap: 8px
+    display: grid
+
+  &__authorization
+    width: 53px
+    box-shadow: 6px 3px 12px -9px hsla(0,0%,100%,.3)
+    bottom: 0
+    left: 66px
+    position: fixed
+    top: auto
+
+.global-navigation .wds-dropdown
+  line-height: 0
+  margin-left: 13px
+
+  @media only screen and (max-height: 840px)
+    margin-left: 16px
+
+.wds-dropdown
+  display: inline-block
+  position: relative
+
+.navigation-link
+  align-items: center
+  color: $violet
+  display: flex
+  flex-direction: column
+
+.link-icon
+  background-color: rgb(199 199 199 / 0.5)
+  border: 2px solid $white
+  border-radius: 50%
+  display: inline-grid
+  height: 35px
+  align-items: center
+  justify-content: center
+  position: relative
+  width: 35px
+  margin-bottom: 3px
+
+.link-icon-authorization
+  display: block
+  height: 35px
+  align-items: center
+  justify-content: center
+  position: relative
+  width: 35px
+  margin-left: 5px
+  fill: $violet
+
+.link-icon:active, .link-icon:focus, .link-icon:hover, .link-icon:visited
+  border-color: $violet
+  border-radius: 50%
+  transition-duration: .3s
+  background-color: rgb(199 199 199 / 0.5)
+  transition-property: background-color,border-color
+
+.link-logo
+  height: 18px
+  width: 20px
+  min-width: 18px
+
+.create-wiki-label
+  text-align: center
+
+.create-wiki-logo
+  border: 2px solid $violet
+  border-radius: 50%
+  width: 60%
+  height: auto
+  margin-left: 6px
+
+.create-wiki-logo:active, .create-wiki-logo:hover, .create-wiki-logo:visited
+  border-radius: 50%
+  transition-duration: .3s
+  background-color: rgb(199 199 199 / 0.5)
+  transition-property: background-color,border-color
+
+.global-logo__icon
+  height: 65px
+  width: 60px
+
+.authorization-icon
+  margin-left: 16px
+
+.is-visible
+  transform: translateY(100%)
+
+.sticky-header
+  align-items: center
+  background-color: #dcdcdc
+  box-shadow: 0 3px 12px 0 rgba(0,0,0,.3)
+  color: #dcdcdc
+  display: flex
+  height: 46px
+  left: 66px
+  min-width: 460px
+  padding: 0 12px
+  position: fixed
+  right: 0
+  top: -46px
+  transition: transform .5s
+  z-index: 701
+
+  @media screen and (min-width: 768px)
+    min-width: 702px
+
+  &__sitename
+    display: -webkit-box
+    flex-shrink: 1
+    font-size: 16px
+    font-weight: 700
+    line-height: 1.25
+    max-width: 350px
+    min-width: min-content
+    overflow: hidden
+
+  &__sitename:hover
+    text-decoration: underline 1.5px solid black
+
+  &__local-navigation
+    flex-grow: 1
+    margin: 0 24px
+
+.navigation__tabs
+  list-style: none
+  grid-column-gap: 24px
+  display: grid
+  grid-template-columns: repeat(auto-fit,minmax(2ch,max-content))
+  width: 100%
+
+  &__tab-level
+    align-items: center
+    display: inline-flex
+    font-size: 14px
+    font-weight: 500
+    height: 40px
+    letter-spacing: .5px
+    margin: 0 11px
+    text-align: center
+    text-decoration: none
+    transition: color .1s
+    white-space: nowrap
+
+  &__tab-level a
+    align-items: center
+    display: inline-flex
+    line-height: 1.25
+    overflow: hidden
+
+.tab-title
+  font-size: 12px
+  font-weight: 700
+  line-height: 1.25
+
+.tab-title:hover
+  text-decoration: underline 1.5px solid black
+
+.tabs-icon
+  height: 12px
+  min-width: 12px
+  width: 12px
+
+.tab-search
+  align-items: center
+
+.sticky-header a
+  color: black
+
+.wiki-tools
+  margin-left: auto
+  align-items: stretch
+  display: inline-flex
+  justify-content: flex-start
+
+  &__search
+    border-radius: 3px 0 0 3px
+    border: 1px solid black
+
+  &__theme-switch
+    border-radius: 0 3px 3px 0
+    border: 1px solid black
+
+.search-icon, .theme-switcher-icon
+  margin: 5px
+  width: 17px
+  height: auto
+
+.main-container
+  display: flex
+  flex-direction: column
+  margin-left: 66px
+  min-width: 702px
+  width: calc(100% - 66px)
+
+.top-ads-container
+  background: #000
+  padding: 15px 0 34px
+  margin: 0 auto
+  width: 100%
+  min-height: 250px
+  min-width: 970px
+  position: relative
+
+.ad-label
+  bottom: 5px
+  color: #858585
+  display: block
+  font-size: 10px
+  font-weight: 500
+  left: 0
+  line-height: 24px
+  position: absolute
+  text-align: center
+  width: 100%
+
+.global-registration-buttons
+  display: flex
+  gap: 9px
+  justify-content: flex-end
+  margin-top: 18px
+  position: absolute
+  right: 0
+
+.main-info
+  display: flex
+  flex-direction: column
+  margin: 0 auto 48px
+  max-width: 1236px
+  position: relative
+  transition: width .3s,max-width .3s
+  width: 85%
+  border-color: #0e191a4d
+
+.global
+  &__signin-link
+    color: black
+    background: none
+    border: 1px solid black
+    border-radius: 3px
+    align-self: center
+    padding: 9px 18px
+    font-family: inherit
+    font-size: 12px
+    font-weight: 600
+
+  &__registration-link
+    color: black
+    border: 1px solid #dcdcdc
+    border-radius: 3px
+    padding: 7px 18px
+    font-family: inherit
+    font-size: 12px
+    font-weight: 600
+    display: flex
+    background-color: #dcdcdc
+
+  &__registration-link:hover
+    background-color: #a9a9a9
+    border-color: #a9a9a9
+    transition: 0.2s ease-in-out
+
+  &__signin-link:hover
+    color: #31585c
+    border-color: #31585c
+    transition: 0.4s ease-in-out
+
+  &__registration-text
+    align-self: center
+
+.icon-small
+  align-self: center
+  width: 18px
+  height: 18px
+  margin-right: 6px
+
+.community-header
+  &__community-name-link
+    color: black
+    font-size: 24px
+    font-weight: 500
+    line-height: 1.25
+    margin-right: 9px
+    overflow: hidden
+
+  &__community-name-link:hover
+    color: #31585c
+    text-decoration: underline 1.5px solid #31585c
+    transition: 0.4s ease-in-out
+
+  &__top
+    display: flex
+    justify-content: space-between
+
+  &__local-navigation
+    display: inline-flex
+
+  &__bottom a
+    color: black
+
+.top
+  &__right
+    display: flex
+    gap: 6px
+    align-items: center
+
+.pages-counter
+  display: flex
+  flex-direction: column
+  text-align: right
+
+  &__number
+    font-size: 18px
+    font-weight: bold
+    letter-spacing: 1.3px
+
+.community-header-wrapper
+  margin-bottom: 24px
+
+.wds-dropdown__toggle
+  position: relative
+  display: inline-block
+
+.wds-dropdown__content
+  display: none
+  position: absolute
+  z-index: 1
+  background-color: white
+  border: 1px solid #d6d0d5
+  border-radius: 3px
+  color: #1e0c1b
+  left: 207%
+  min-width: 70%
+  padding: 7px 0
+  bottom: 70%
+  transform: translateX(-50%)
+
+.wds-dropdown__content a, .wds-dropdown__content div
+  display: block
+  top: 50%
+
+.wds-dropdown__toggle:hover .wds-dropdown__content
+  display: block
+
+.global-navigation .wds-dropdown.is-anon-dropdown .wds-dropdown__content
+  padding: 0 12px
+
+.global-navigation .wds-dropdown.is-attached-to-bottom .wds-dropdown__content
+  bottom: 0
+  left: 66px
+  position: fixed
+  top: auto
+
+.wds-dropdown.wds-open-to-right .wds-dropdown__content
+  left: 100%
+  min-width: 0
+  top: -50%
+  transform: none
+
+.wds-dropdown__content
+  background-color: white
+  border: 1px solid #d6d0d5
+  border-radius: 3px
+  color: #1e0c1b
+  display: none
+  left: 50%
+  min-width: 70%
+  padding: 7px 0
+  position: absolute
+  top: 100%
+  transform: translateX(-50%)
+  z-index: 1
+
+.global-navigation .wds-dropdown.is-anon-dropdown .wds-dropdown__content .global-navigation__register-text
+  line-height: 1.25
+  max-width: 160px
+  padding: 0 3px
+
+.global-navigation .wds-dropdown.is-anon-dropdown .wds-dropdown__content>*
+  margin: 12px 0
+
+.global-navigation__register-text
+  line-height: 1.75
+  font-weight: lighter
+  font-size: 14px
+
+.wds-button.wds-is-full-width
+  box-sizing: border-box
+  display: flex
+  width: 100%
+
+.global-navigation__register-link
+  background-color: #520044
+  color: white
+  border-radius: 3px
+
+.global-navigation__register-link:hover
+  background-color: #b80099
+
+.global-navigation__signin-link
+  border: 1px solid #1e0c1b
+  border-radius: 3px
+  color: #1e0c1b
+
+.global-navigation__signin-link:hover
+  border: 1px solid #67295d
+  color: #67295d
+  background-color: white
+
+.global-navigation .wds-dropdown
+  @media only screen and (max-height: 840px)
+    margin-left: 20px
+
+.wds-icon
+  @media only screen and (max-height: 840px)
+    height: 24px
+    width: 24px
+
+//.tabs__dropdown:hover .wds-dropdown__content
+  display: inline-block
+  height: 100%
+  width: auto
+  z-index: 400
+
+//.wds-dropdown__content:hover .wds-list
+  display: inline-block

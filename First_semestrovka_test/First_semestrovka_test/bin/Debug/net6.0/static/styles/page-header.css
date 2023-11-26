@@ -1,0 +1,15 @@
+.header-search, .header-switch {
+  height: 28px;
+}
+
+.community-header-wrapper {
+  margin-top: 73px;
+}
+
+.header-tab:hover {
+  color: #31585c;
+  text-decoration: underline 1.5px solid #31585c;
+  transition: 0.4s ease-in-out;
+}
+
+/*# sourceMappingURL=page-header.css.map */

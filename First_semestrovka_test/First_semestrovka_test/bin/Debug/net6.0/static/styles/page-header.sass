@@ -1,0 +1,241 @@
+.page-side-tools
+  display: inline-flex
+
+.header-search, .header-switch
+  height: 28px
+
+.community-header-wrapper
+  margin-top: 73px
+
+.header-tab:hover
+  color: #31585c
+  text-decoration: underline 1.5px solid #31585c
+  transition: 0.4s ease-in-out
+
+.page
+  &__main
+    background-color: white
+    border-radius: 3px 3px 3px 3px
+    box-shadow: rgb(199 199 199 / 0.5)
+    min-height: 100%
+    display: flex
+
+  &__right-rail
+    transition: width .3s
+    width: 336px
+    background-color: #f2f2f2
+    padding: 24px 18px
+
+.right-rail-wrapper
+  display: flex
+  flex-direction: column
+  height: 100%
+
+.sticky-modules-wrapper
+  position: sticky
+  top: 60px
+
+.main-info-page
+  min-height: 480px
+  padding: 27px 32px
+  position: relative
+  width: calc(100% - 330px)
+  font-size: 14px
+
+.main-info-page a
+  color: black
+  font-weight: 400
+  letter-spacing: 0.4px
+
+.page-side-tools
+  height: 100%
+  left: 0
+  padding-top: 18px
+  padding-bottom: 430px
+  position: absolute
+  top: 18px
+  transform: translateX(-50%)
+  z-index: 200
+
+.side-tools
+  position: sticky
+  height: 100px
+  top: 58px
+
+.side-tool
+  align-items: center
+  background: #f2f2f2
+  border: none
+  border-radius: 50%
+  box-shadow: 0 3px 12px 0 rgba(0,0,0,.3)
+  color: black
+  cursor: pointer
+  display: flex
+  height: 36px
+  justify-content: center
+  margin-bottom: 9px
+  outline: none
+  transition: color .3s
+  width: 36px
+
+.tool-image
+  width: 15px
+  height: 15px
+
+.page-header
+  margin-bottom: 20px
+
+  &__top
+    display: flex
+    justify-content: space-between
+    margin-bottom: 20px
+
+  &__bottom
+    display: flex
+
+  &__title-wrapper
+    flex-grow: 1
+
+  &__title
+    font-size: 36px
+    font-weight: 300
+    letter-spacing: .25px
+    line-height: 1.25
+    overflow-wrap: break-word
+    word-break: break-word
+
+  &__actions
+    align-items: flex-start
+    display: flex
+    margin-left: 9px
+    padding-top: 9px
+
+  &__action-button
+    border-radius: 18px
+    box-sizing: border-box
+    height: 36px
+    margin: 0 3px 0 2px
+    position: relative
+    display: flex
+    align-items: center
+
+.language-rail
+  letter-spacing: 0.4px
+
+.popular-pages
+  display: block
+
+  &__link
+    display: flex
+    align-items: center
+    gap: 12px
+
+  &__link span
+    font-size: 14px
+    font-weight: 400
+    color: black
+
+  &__image
+    border-radius: 3px
+
+  &__list:hover
+    text-decoration: underline 1px solid black
+
+
+.rail-module
+  position: sticky
+  &__title
+    display: inline-block
+    font-size: 16px
+    font-weight: 700
+    line-height: 1.25
+    margin-bottom: 15px
+    background-color: rgb(0,0,0, 0.1)
+
+  &__list
+    list-style: none
+    gap: 12px
+    display: grid
+
+//.sticky-modules-wrapper
+  position: sticky
+
+.button-counter
+  align-items: center
+  background-color: #dcdcdc
+  border-radius: 9px
+  box-sizing: border-box
+  color: black
+  display: flex
+  font-size: 10px
+  font-weight: 700
+  height: 18px
+  justify-content: center
+  left: 21px
+  min-width: 18px
+  padding: 0 5px
+  position: absolute
+  top: 0
+  transition: opacity .3s
+  z-index: 1
+
+.action-button-icon
+  padding-left: 12px
+  padding-right: 12px
+  width: auto
+
+.signin
+  padding-left: 12px
+  padding-right: 12px
+  width: auto
+  gap: 6px
+
+.signin span
+  font-weight: bold
+
+.borderlines
+  border-right: 1px solid #9D9FA1
+  border-left: 1px solid #9D9FA1
+  padding: 0 18px
+  display: inline-flex
+  align-items: center
+
+.wds-button
+  display: inline-flex
+  font-family: inherit
+  font-size: 12px
+  font-weight: 600
+  justify-content: center
+  letter-spacing: .15px
+  line-height: 16px
+  margin: 0
+  min-height: 18px
+  outline: none
+  padding: 7px 0
+  text-decoration: none
+  text-transform: uppercase
+  vertical-align: top
+
+.wds-button:hover
+  background-color: #dcdcdc
+  transition-duration: .3s
+  transition-property: background-color,border-color,color
+
+#message-button
+  padding: 0
+
+.edit-icon
+  width: 23px
+  margin-right: 6px
+
+.dropdown-icon
+  height: 18px
+
+.dropdown__toggle
+  margin-left: 10px
+
+.dropdown__toggle:hover
+  background-color: #dcdcdc
+  border-radius: 9px
+  transition-duration: .3s
+  transition-property: background-color,border-color,color

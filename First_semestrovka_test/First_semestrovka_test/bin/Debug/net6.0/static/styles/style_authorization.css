@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "MyRubik", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+  text-decoration: none;
+}
+
+body {
+  background-color: #f5f3f5;
+  display: flex;
+}
+
+.authorization {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px auto;
+  width: 50vw;
+  height: 70vh;
+}
+
+.header {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 30px;
+  background-color: #280033;
+  border-radius: 3px 3px 0 0;
+}
+
+.welcome {
+  font-size: 26px;
+  color: white;
+  font-weight: bold;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  border-radius: 0 0 3px 3px;
+  padding: 40px;
+  gap: 50px;
+}
+
+.sign-in {
+  font-size: 16px;
+  color: #280033;
+  font-weight: bold;
+}
+.sign-in__form {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+
+.username, .password, .sign-in__button, .login {
+  width: 290px;
+  height: 36px;
+}
+
+.username, .password , .login {
+  font-size: 16px;
+  border-color: transparent;
+  border-bottom: 1px solid #d6d0d5;
+}
+
+.sign-in__button {
+  font-weight: bold;
+  color: white;
+  background-color: #a980a2;
+  border-radius: 3px;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style_authorization.css.map */

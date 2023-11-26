@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fandom Auth</title>
+  <link rel="stylesheet" href="./styles/style_authorization.css">
+  <link rel="icon" href="./images/favicon.ico">
+</head>
+<body>
+
+<div class="authorization">
+  <div class="header">
+    <span class="welcome">Welcome Back!</span>
+  </div>
+  <div class="bottom">
+    <span class="sign-in">Sign in with Username</span>
+    <form method="post" action="/authorize/authorizeAdmin" class="sign-in__form" >
+
+      <input type="text" class="username" title="username"  placeholder="Username" id="IdUserTesting" name="username"
+      required pattern="/^[a-z0-9_-]{3,16}$/" maxlength="32">
+      <input type="text" class="login" title="login"  placeholder="Login" id="login" name="login"
+             required pattern="/^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i">
+      <input type="password" class="password" title="password"  placeholder="Password" id="password" name="password"
+             required > <!--pattern="/^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8,}$/"-->
+      <button class="sign-in__button" id="sign-in" type="submit">SIGN IN</button>
+    </form>
+  </div>
+</div>
+
+<!--<script src="scripts/script_authorization.js"></script>-->
+
+</body>
+</html>
